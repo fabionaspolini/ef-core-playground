@@ -1,9 +1,8 @@
-﻿namespace ConsoleApp.Domain
+﻿namespace ConsoleApp.Domain;
+
+public class Cidade
 {
-    public class Cidade
-    {
-        public int Id { get; set; }
-        public string Nome { get; set; }
-        public string UF { get; set; }
-    }
+    public int Id { get; set; }
+    public string Nome { get; set; }
+    public string UF { get; set; }
 }

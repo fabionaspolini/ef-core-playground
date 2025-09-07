@@ -2,14 +2,13 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace ConsoleApp.Infra.Mappings
+namespace ConsoleApp.Infra.Mappings;
+
+public class CidadeMap : IEntityTypeConfiguration<Cidade>
 {
-    public class CidadeMap : IEntityTypeConfiguration<Cidade>
+    public void Configure(EntityTypeBuilder<Cidade> builder)
     {
-        public void Configure(EntityTypeBuilder<Cidade> builder)
-        {
-            builder.ToTable("cidade");
-            builder.HasKey(x => x.Id);
-        }
+        builder.ToTable("cidade");
+        builder.HasKey(x => x.Id);
     }
 }
