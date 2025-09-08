@@ -9,8 +9,8 @@ var optionsBuilder = new DbContextOptionsBuilder<SampleContext>();
 optionsBuilder.UseNpgsql(Consts.ConnectionString);
 optionsBuilder.LogTo(Console.WriteLine);
 
-using var conn = new SampleContext(optionsBuilder.Options);
-conn.Database.Migrate();
+await using var conn = new SampleContext(optionsBuilder.Options);
+await conn.Database.MigrateAsync();
 
 var query = conn.Fretes
     .Where(x => x.Remetente.Cidade.UF == "SC")
