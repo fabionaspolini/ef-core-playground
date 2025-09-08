@@ -30,7 +30,7 @@ var fretes = query.AsNoTracking().ToList();
 
 Console.WriteLine("Fim");
 
-public class Consts
+public static class Consts
 {
     public const string ConnectionString = "Server=localhost;Port=5432;Database=ef-core-playground;User Id=postgres;Password=123456;";
 }
