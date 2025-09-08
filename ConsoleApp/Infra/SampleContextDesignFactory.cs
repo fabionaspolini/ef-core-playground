@@ -11,7 +11,7 @@ public class SampleContextDesignFactory : IDesignTimeDbContextFactory<SampleCont
     public SampleContext CreateDbContext(string[] args)
     {
         var optionsBuilder = new DbContextOptionsBuilder<SampleContext>();
-        optionsBuilder.UseNpgsql(Program.ConnectioString);
+        optionsBuilder.UseNpgsql(Consts.ConnectionString);
         return new SampleContext(optionsBuilder.Options);
     }
 }
